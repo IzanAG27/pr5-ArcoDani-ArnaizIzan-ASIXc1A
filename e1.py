@@ -36,7 +36,7 @@ temperatura = {
 any = int(input("Introduce el año: "))
 for i in range(0, 21):
     lista_ordenada = sorted(temperatura[i][0])
-    print(lista_ordenada)
+    print(lista_ordenada)hola
     """
     if any == i:
         lista_ordenada = sorted(temperatura[i][0])
