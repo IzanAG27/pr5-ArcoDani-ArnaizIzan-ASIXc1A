@@ -5,20 +5,25 @@
     Descripció:
     Programa de traducció d'insults.
 """
+insultsDiccionari = (("CARALLOT", "MOCOS", "MALPARIT"),
+                     ("CARAROLLO", "MOCOSO", "MALPARIDO"),
+                     ("HECK", "BRAT", "BASTARD"),
+                     ("QARDANG", "yIv", "marqeq"))
 
-insultsDiccionari = {
-    'CAT': ["CARALLOT", "MOCOS", "MALPARIT"],
-    'ESP': ["CARAROLLO", "MOCOSO", "MALPARIDO"],
-    'ENG': ["HECK", "BRAT", "BASTARD"],
-    'KLI': ["QARDANG", "yIv", "marqeq"]
-}
-
-print("Introdueix l'insult en majúscules\n")
+print("Introdueix l'insult en majúscules: \n")
 insult = input("")
+posicioX = -1
+posicioY = -1
 
-if insult == insultsDiccionari:
+for x in range(0, len(insultsDiccionari)):
+    for y in range(0, len(insultsDiccionari[x])):
+        if insult.upper() == insultsDiccionari[x][y]:
+            posicioX = x
+            posicioY = y
 
-
-# print(['ESP'][insulto])
-# print(['ENG'][insulto])
-# print(['KLI'][insulto])
+if posicioX == -1 or posicioY == -1:
+    print("ERROR, Introdueix un insult vàlid i en català")
+else:
+    for x in range(0, len(insultsDiccionari)):
+        if x != posicioX:
+            print(insultsDiccionari[x][posicioY])
