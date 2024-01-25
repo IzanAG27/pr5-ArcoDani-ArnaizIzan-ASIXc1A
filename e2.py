@@ -8,12 +8,16 @@
 """
 import random
 
+# Generem una llista de 100 numeros aleatoris entre el 1 y el 50 cadascun.
 nums = [random.randint(1,50) for x in range(100)]
+
+
 sumaParell = 0
 sumaSenar = 0
 nombreParell = 0
 nombreSenar = 0
 
+# Bucle del 0 al 99(100 Numeros)
 for i in range(0, 99):
     if nums[i] % 2 == 0:
         sumaParell += nums[i]
@@ -21,5 +25,7 @@ for i in range(0, 99):
     else:
         sumaSenar += nums[i]
         nombreSenar += 1
+
+# Imprimim els parells i senars i els dividim per el nombre de Parells o Senars respectivament
 print(f"La mitjana dels números parells es: {sumaParell // nombreParell}.")
 print(f"La mitjana dels números senars es: {sumaSenar // nombreSenar}.")
