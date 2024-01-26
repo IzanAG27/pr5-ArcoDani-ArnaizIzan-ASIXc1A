@@ -5,7 +5,7 @@
     Descripció:
     Programa de traducció d'insults.
 """
-insultsDiccionari = (("CARALLOT", "MOCOS", "MALPARIT"),
+INSULTSDICCIONARI = (("CARALLOT", "MOCOS", "MALPARIT"),
                      ("CARAROLLO", "MOCOSO", "MALPARIDO"),
                      ("HECK", "BRAT", "BASTARD"),
                      ("QARDANG", "yIv", "marqeq"))
@@ -15,16 +15,16 @@ insult = input("")
 posicioX = -1
 posicioY = -1
 
-for x in range(0, len(insultsDiccionari)):
-    for y in range(0, len(insultsDiccionari[x])):
-        if insult.upper() == insultsDiccionari[x][y]:
+for x in range(0, len(INSULTSDICCIONARI)):
+    for y in range(0, len(INSULTSDICCIONARI[x])):
+        if insult.upper() == INSULTSDICCIONARI[x][y]:
             posicioX = x
             posicioY = y
 
 if posicioX != -1 or posicioY != -1:
-    for x in range(0, len(insultsDiccionari)):
+    for x in range(0, len(INSULTSDICCIONARI)):
         if x != posicioX:
-            print(insultsDiccionari[x][posicioY])
+            print(INSULTSDICCIONARI[x][posicioY])
 else:
 
     print("ERROR, Introdueix un insult vàlid i en català")
