@@ -11,7 +11,6 @@ import random
 # Generem una llista de 100 numeros aleatoris entre el 1 y el 50 cadascun.
 nums = [random.randint(1,50) for x in range(100)]
 
-
 sumaParell = 0
 sumaSenar = 0
 nombreParell = 0
@@ -19,7 +18,7 @@ nombreSenar = 0
 listaPS = []
 # Bucle del 0 al 99(100 Numeros)
 for i in range(0, 99):
-    if nums[i] % 2 == 0:
+    if i % 2 == 0:
         sumaParell += nums[i]
         nombreParell += 1
         listaPS.append(nums[i])
