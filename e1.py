@@ -53,7 +53,7 @@ temperatura_mitjana = 0
 temperatura_maxima = 0
 temperatura_minima = float('inf')  # Inicializar con un valor muy alto
 
-for i in range(23):
+for i in range(22):
     for j in range(12):
         temperatura_mitjana += temperatura[i][j]
         if temperatura[i][j] > temperatura_maxima:
