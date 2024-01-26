@@ -5,7 +5,6 @@
     Descripció:
     10 preus i calcula la mitjana dels preus i el preu mes elevat.
 """
-
 preu = [int(x) for x in input("").split()]
 preusIntroduits = []
 PreusSorted = []
@@ -17,5 +16,12 @@ if len(preu) == 10:
     PreusSorted = sorted(preusIntroduits)
     print(f"La mitjana es: {suma // 10}.\nEl preu mes elevat es: {PreusSorted[-1:]}."
           f"\nAquest son els preus introduïts: {preusIntroduits}")
+    print("Operacions: (", end="")
+    for x in preusIntroduits:
+        if x != preusIntroduits[-1]:
+            print(str(x) + " + ", end="")
+        else:
+            print(str(x), end="")
+    print(f") // {10}")
 else:
     print("ERROR!, Introduce EXACTAMENTE 10 numeros enteros.")
