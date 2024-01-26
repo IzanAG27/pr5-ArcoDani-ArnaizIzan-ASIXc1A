@@ -21,9 +21,10 @@ for x in range(0, len(insultsDiccionari)):
             posicioX = x
             posicioY = y
 
-if posicioX == -1 or posicioY == -1:
-    print("ERROR, Introdueix un insult vàlid i en català")
-else:
+if posicioX != -1 or posicioY != -1:
     for x in range(0, len(insultsDiccionari)):
         if x != posicioX:
             print(insultsDiccionari[x][posicioY])
+else:
+
+    print("ERROR, Introdueix un insult vàlid i en català")
