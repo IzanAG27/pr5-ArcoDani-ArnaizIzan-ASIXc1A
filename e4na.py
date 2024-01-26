@@ -17,3 +17,5 @@ if len(preu) == 10:
     PreusSorted = sorted(preusIntroduits)
     print(f"La mitjana es: {suma // 10}.\nEl preu mes elevat es: {PreusSorted[-1:]}."
           f"\nAquest son els preus introduïts: {preusIntroduits}")
+else:
+    print("ERROR!, Introduce EXACTAMENTE 10 numeros enteros.")
