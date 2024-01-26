@@ -16,16 +16,19 @@ sumaParell = 0
 sumaSenar = 0
 nombreParell = 0
 nombreSenar = 0
-
+listaPS = []
 # Bucle del 0 al 99(100 Numeros)
 for i in range(0, 99):
     if nums[i] % 2 == 0:
         sumaParell += nums[i]
         nombreParell += 1
+        listaPS.append(nums[i])
     else:
         sumaSenar += nums[i]
         nombreSenar += 1
+        listaPS.append(nums[i])
 
 # Imprimim els parells i senars i els dividim per el nombre de Parells o Senars respectivament
-print(f"La mitjana dels números parells es: {sumaParell // nombreParell}.")
-print(f"La mitjana dels números senars es: {sumaSenar // nombreSenar}.")
+print(f"Amb els nombres: {listaPS}")
+print(f"mitjana posicions parelles: {sumaParell // nombreParell}.")
+print(f"mitjana posicions senars: {sumaSenar // nombreSenar}.")
