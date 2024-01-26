@@ -34,10 +34,10 @@ temperatura = (
 
 temperatura_mitjana = 0
 temperatura_maxima = 0
-temperatura_minima = float('inf')
+temperatura_minima = 100
 
 for i in range(12):
-    temperatura_mitjana += temperatura[22][i]  # Usar índice 0 para el año 2022
+    temperatura_mitjana += temperatura[22][i]
     if temperatura[22][i] > temperatura_maxima:
         temperatura_maxima = temperatura[22][i]
 
@@ -51,9 +51,9 @@ print(f"Any 2022:\n"
 
 temperatura_mitjana = 0
 temperatura_maxima = 0
-temperatura_minima = float('inf')  # Inicializar con un valor muy alto
+temperatura_minima = 100
 
-for i in range(22):
+for i in range(23):
     for j in range(12):
         temperatura_mitjana += temperatura[i][j]
         if temperatura[i][j] > temperatura_maxima:
